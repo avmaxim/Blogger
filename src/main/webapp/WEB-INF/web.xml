@@ -13,4 +13,17 @@
     <welcome-file-list>
         <welcome-file>/views/index.jsp</welcome-file>
     </welcome-file-list>
+
+    <context-param>
+        <param-name>db_url</param-name>
+        <param-value>jdbc:mysql://localhost/mysql_db</param-value>
+    </context-param>
+    <context-param>
+        <param-name>db_username</param-name>
+        <param-value>mysql_username</param-value>
+    </context-param>
+    <context-param>
+        <param-name>db_password</param-name>
+        <param-value>mysql_password</param-value>
+    </context-param>
 </web-app>

@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<!--
-	<%@ taglib prefix="c" uri="http://www.springframework.org/tags" %>
-	<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
- -->
 <%@page import="java.util.Date"%>
-<%@ page language="java" contentType="text/html; charset=US-ASCII"
-		 pageEncoding="US-ASCII"%>
-<html>
-<head>
-  <title>Flogger</title>
-</head>
 
-  <body>
-	<h1 style="text-align: center; margin-top: 50px">Hi there, from Andrew =)</h1>
-	<h3 style="text-align: center; color: green"> Date = <%= new Date() %> </h3>
-  </body>
+<%@ page language="java" contentType="text/html; charset=US-ASCII"
+         pageEncoding="US-ASCII"%>
+<html>
+    <head>
+        <title>Flogger Home</title>
+    </head>
+
+    <body>
+        <div style="text-align: center; margin-top: 100px">
+            <h1>Hi there from Flogger =)</h1>
+            <h3 style="color: green"> Date: <%= new Date() %> </h3>
+            <h4 >Go to <a  href="/views/login.jsp">Login Page</a></h4>
+        </div>
+    </body>
 
 </html>
