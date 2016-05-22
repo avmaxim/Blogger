@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Date;
 
+import javax.servlet.Servlet;
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.annotation.WebServlet;
@@ -13,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet( urlPatterns = {"/index"} )
 
-public class MainController extends HttpServlet {
+public class MainController extends HttpServlet implements Servlet{
 
     private static final String HTML_START = "<html><body>";
     private static final String HTML_END = "</body></html>";
