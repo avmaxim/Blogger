@@ -5,14 +5,19 @@
          version="3.1">
 
     <display-name>Flogger</display-name>
-
-    <description>
-        A blog for cool guys
-    </description>
+    <description> A blog for cool guys </description>
 
     <welcome-file-list>
         <welcome-file>/views/index.jsp</welcome-file>
     </welcome-file-list>
+
+    <resource-ref>
+        <description> Flogger Database 1.0</description>
+        <res-ref-name>jdbc/booksdb</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+        <res-sharing-scope>Shareable</res-sharing-scope>
+    </resource-ref>
 
     <context-param>
         <param-name>db_url</param-name>
