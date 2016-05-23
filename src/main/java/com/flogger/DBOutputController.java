@@ -31,7 +31,7 @@ public class DBOutputController extends HttpServlet implements Servlet {
         initDatabaseConnection("booksdb");
     }
 
-    private void initDatabaseConnection(String databaseName) throws ServletException{
+    public void initDatabaseConnection(String databaseName) throws ServletException{
         try{
             InitialContext ctx = new InitialContext();
             pool = (DataSource)ctx.lookup("java:comp/env/jdbc/" + databaseName);
@@ -41,6 +41,22 @@ public class DBOutputController extends HttpServlet implements Servlet {
         } catch (NamingException ex) {
             ex.printStackTrace();
         }
+    }
+
+    public void initDatabaseConnection(String databaseName, Hashtable env) throws ServletException{
+        try{
+            InitialContext ctx = new InitialContext(env);
+            pool = (DataSource)ctx.lookup("java:comp/env/jdbc/" + databaseName);
+            if (pool == null)
+                throw new ServletException("Unknown DataSource 'jdbc/"+ databaseName +"'");
+            getServletContext().setAttribute("db_success", "true");
+        } catch (NamingException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    public DataSource getPool(){
+        return pool;
     }
 
     @Override
