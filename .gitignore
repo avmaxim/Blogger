@@ -1,5 +1,5 @@
 src/main/webapp/client-resources/bower_components
-.idea/
+.idea/workspace.xml
 out
 target
 node_modules

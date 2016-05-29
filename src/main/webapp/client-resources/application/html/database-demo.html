@@ -9,7 +9,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr ng-model="dbCtrl.users" ng-repeat="user in dbCtrl.users">
+            <tr ng-repeat="user in dbCtrl.users">
                 <td><span ng-bind="user.id"></span></td>
                 <td><span ng-bind="user.value"></span></td>
             </tr>
@@ -26,13 +26,13 @@
             </tr>
         </thead>
         <tbody>
-            <tr ng-model="dbCtrl.users" ng-repeat="article in dbCtrl.articles">
+            <tr ng-repeat="article in dbCtrl.articles">
                 <td><span ng-bind="article.id"></span></td>
                 <td><span ng-bind="article.value"></span></td>
             </tr>
         </tbody>
     </table>
 
-    <p>Go to <a href="#/">Main Page</a></p>
+    <h4>Go to <a href="#/">Main Page</a></h4>
 
 </div>

@@ -20,7 +20,7 @@
                $http
                     .post( urls.ACCOUNT_LOGIN, formLoginData )
                     .success(function (response, status, headers, config) {
-                        loginCtrl.message = response;
+                        loginCtrl.message = response.data;
                     })
                     .error(function (response, status, headers, config) {
                         console.error("Exception details: " + JSON.stringify({data: response}));

@@ -11,7 +11,7 @@
         dbCtrl.articles = [];
         
         dbCtrl.fetchAllUsers = function() {
-            $http
+            return $http
                 .get(urls.USERS_SHOWUP)
                 .success(function(response, status, headers, config){
                     dbCtrl.users = response.data;
@@ -22,7 +22,7 @@
         };
         
         dbCtrl.fetchAllArticles = function() {
-            $http
+            return $http
                 .get(urls.ARTICLES_SHOWUP)
                 .success(function(response, status, headers, config){
                     dbCtrl.articles = response.data;
@@ -32,7 +32,6 @@
                 })
         };
 
-        dbCtrl.fetchAllUsers();
-       // dbCtrl.fetchAllArticles();
+        dbCtrl.fetchAllUsers().then(dbCtrl.fetchAllArticles);
     }
 })();

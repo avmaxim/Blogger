@@ -27,15 +27,16 @@ public class Article extends Entity {
     public void setTimestamp(Date date){this.date = date; }
 
     public User getOwner(){ return owner; }
-    public void setOwner(User user){this.owner = owner; }
+    public void setOwner(User owner){this.owner = owner; }
 
     @Override
     public String toString(){
+
         return "[id: " + getId() + "], " +
                 "[header: " + getHeader() + "], " +
                 "[contents: " + getContents() + "], " +
                 "[likesCount: " + getLikesCount() + "], " +
                 "[date: " + getTimestamp() + "], " +
-                "[userID: " + getOwner().getId();
+                "[userID: " + ((getOwner() == null) ? "null" : getOwner().getId()) + "]";
     }
 }

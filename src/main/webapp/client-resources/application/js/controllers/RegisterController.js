@@ -3,20 +3,19 @@
 
     angular
         .module("registerControllerModule", [])
-        .controller("registerController", ["urls", registerController]);
+        .controller("registerController", ["$http", "urls", registerController]);
 
-    function registerController(urls) {
+    function registerController($http, urls) {
         var accountCtrl = this;
-        accountCtrl.date = new Date();
+        accountCtrl.date = new Date(Date.now);
+        accountCtrl.user = {name: "", password: "", email: ""};
         accountCtrl.submit = submit;
-        var USER_ROLE_HARDCODED_FOR_NOW = "User";
 
         function submit() {
             var formRegisterData = {
                 "email": accountCtrl.user.email,
                 "username": accountCtrl.user.name,
-                "password": accountCtrl.user.password,
-                "role": USER_ROLE_HARDCODED_FOR_NOW
+                "password": accountCtrl.user.password
             };
 
             $http
