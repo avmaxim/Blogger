@@ -1,6 +1,7 @@
 package com.flogger.controllers;
 
 import com.fasterxml.jackson.annotation.JsonView;
+import com.flogger.FloggerJsonData;
 import com.flogger.domains.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,21 +21,26 @@ import java.util.Map;
 public class AccountController {
 
     @RequestMapping (value = "/login" , method = RequestMethod.POST, produces = "application/json")
-    public @ResponseBody UserLoginModel loginUser(@RequestBody UserLoginModel person) {
+    public @ResponseBody FloggerJsonData loginUser(@RequestBody UserLoginModel person) {
         UserLoginModel user = new UserLoginModel();
         user.setUsername(person.getUsername());
         user.setPassword(person.getPassword());
-        return user;
+        return FloggerJsonData.GetAsJson(user);
     }
 
     @RequestMapping (value = "/logout" , method = RequestMethod.POST, produces = "application/json")
-    public @ResponseBody UserLoginModel logoutUser() {
-        UserLoginModel user = new UserLoginModel();
-        user.setUsername("Someone");
-        user.setPassword("123qwe");
-        return user;
+    public @ResponseBody FloggerJsonData logoutUser() {
+        return FloggerJsonData.GetAsJson("null");
     }
 
+    @RequestMapping (value = "/register" , method = RequestMethod.POST, produces = "application/json")
+    public @ResponseBody   FloggerJsonData registerUser(@RequestBody UserRegistrationModel person) {
+        UserRegistrationModel user = new UserRegistrationModel();
+        user.setUsername(person.getUsername());
+        user.setPassword(person.getPassword());
+        user.setEmail(person.getEmail());
+        return FloggerJsonData.GetAsJson(user);
+    }
 
     /*
     protected void authenticateUser(@RequestBody ) throws ServletException, IOException {

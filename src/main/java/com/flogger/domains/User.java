@@ -46,7 +46,7 @@ public class User extends Entity {
                 "[username: " + getUsername() + "], " +
                 "[password: " + getPassword() + "], " +
                 "[email: " + getEmail() + "], " +
-                "[role: " + getRole().getRoleName();
+                "[role: " + ((getRole() == null) ? "null" : getRole().getRoleName()) + "]";
     }
 
 }
