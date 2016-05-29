@@ -1,0 +1,14 @@
+<md-toolbar class="md-primary" layout="row">
+    <div class="md-toolbar-tools" layout-align="center center">
+        <h3 class="ng-binding">{{ 'Flogger' }}</h3>
+    </div>
+</md-toolbar>
+
+<div flex layout="row">
+    <md-content flex id="content" layout-padding>
+        <md-progress-linear md-mode="indeterminate"
+                            ng-show="mainVm.isContentProgressShown()">
+        </md-progress-linear>
+        <div ui-view="" ng-show="!mainVm.isContentProgressShown()"></div>
+    </md-content>
+</div>

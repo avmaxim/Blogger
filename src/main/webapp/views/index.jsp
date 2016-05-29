@@ -6,10 +6,12 @@
 <head>
     <title>Flogger Home</title>
     <jsp:include page="add-ons/css.jsp"/>
+    <meta http-equiv="refresh" content="0;#/">
+    <base href="/client-resources/">
 </head>
-<body ng-app="floggerApp">
+<body ng-app="app">
     <div>
-        <div ng-view></div>
+        <div ui-view></div>
     </div>
     <jsp:include page="add-ons/componJS.jsp"/>
     <jsp:include page="add-ons/appJS.jsp"/>
