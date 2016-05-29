@@ -6,6 +6,9 @@
     maxWait: Maximum milliseconds to wait for a dB connection to become available
              Set to -1 to wait indefinitely.
   -->
+
+  <Resources antiResourceLocking="false" cachingAllowed="false" />
+
   <Resource name="jdbc/floggerdb" auth="Container" type="javax.sql.DataSource"
      maxActive="100" maxIdle="30" maxWait="10000" removeAbandoned="true"
      username="root" password="mama" driverClassName="com.mysql.jdbc.Driver"
