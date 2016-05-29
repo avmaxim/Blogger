@@ -13,14 +13,15 @@ public class ArticleRepository implements IRepository<Article>{
 
     @Override
     public Article getById(Integer id) {
+        User user = new User();
+        user.setId(id);
+
         Article article = new Article();
         article.setId(id);
         article.setHeader("Header #" + id);
         article.setContents("About " + id);
         article.setLikesCount(3);
         article.setTimestamp(new Date());
-        User user = new User();
-        user.setId(id);
         article.setOwner(user);
         return article;
     }
