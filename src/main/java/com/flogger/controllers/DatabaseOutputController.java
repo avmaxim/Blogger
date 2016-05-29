@@ -1,9 +1,8 @@
-package com.flogger;
+package com.flogger.controllers;
 
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.servlet.*;
-import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -19,16 +18,16 @@ import java.util.*;
         urlPatterns = {"/database-contents"},
         description = "Database Contents Servlet")
 
-public class DBOutputController extends HttpServlet implements Servlet {
+public class DatabaseOutputController extends HttpServlet implements Servlet {
     DataSource pool;    //Database Connection Pool
 
-    public DBOutputController(){
+    public DatabaseOutputController(){
         super();
     }
 
     @Override
     public void init() throws ServletException {
-        initDatabaseConnection("booksdb");
+        initDatabaseConnection("floggerdb");
     }
 
     public void initDatabaseConnection(String databaseName) throws ServletException{
