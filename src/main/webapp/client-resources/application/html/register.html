@@ -2,12 +2,11 @@
 
     <form data-ng-submit="accountCtrl.submit()" name="loginForm" novalidate>
         Email: <input type="text" data-ng-model="accountCtrl.user.email"> <br>
-        Username: <input type="password" data-ng-model="accountCtrl.user.username">  <br>
+        Username: <input type="text" data-ng-model="accountCtrl.user.name">  <br>
         Password: <input type="password" data-ng-model="accountCtrl.user.password">  <br>
-
         <input type="submit" value="Sign Up">
     </form>
-    <p>Already have account? <a href="#/register">Login</a></p>
-    <p>Go <a href="#/">Home</a></p>
-    <h1>U sent: {{loginCtrl.message}}</h1>
+    <h1>U sent: {{accountCtrl.message}}</h1>
+    <h4>Already have account? <a href="#/login">Login</a></h4>
+    <h4>Go <a href="#/">Home</a></h4>
 </div>
