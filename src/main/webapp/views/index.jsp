@@ -9,7 +9,7 @@
 </head>
 <body ng-app="floggerApp">
     <div>
-        <div ng-view></div>
+        <div class="container" ui-view></div>
     </div>
     <jsp:include page="add-ons/componJS.jsp"/>
     <jsp:include page="add-ons/appJS.jsp"/>
