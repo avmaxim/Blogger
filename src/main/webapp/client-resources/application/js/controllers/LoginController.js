@@ -3,9 +3,9 @@
 
     angular
         .module("loginControllerModule", [])
-        .controller("loginController", ["$http", "urls", loginController]);
+        .controller("loginController", ["$http", "$state", "urls", loginController]);
 
-    function loginController($http, urls) {
+    function loginController($http, $state, urls) {
             var loginCtrl = this;
             loginCtrl.message = "";
             loginCtrl.user = {name: "", password: ""};
@@ -21,6 +21,7 @@
                     .post( urls.ACCOUNT_LOGIN, formLoginData )
                     .success(function (response, status, headers, config) {
                         loginCtrl.message = response.data;
+                        $state.go('articles');
                     })
                     .error(function (response, status, headers, config) {
                         console.error("Exception details: " + JSON.stringify({data: response}));
