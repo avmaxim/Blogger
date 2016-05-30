@@ -33,7 +33,9 @@ public class ArticleService implements IArticleService{
         article.setId(2);
         article.setLikesCount(0);
         article.setHeader("Java vs Javascript 2016. Still stumped? ");
-        article.setContents("in the nutshell, java is mostly used for back, js for front");
+        article.setContents("in the nutshell, java is mostly used for back, js for front in the nutshell, java is" +
+                " mostly used for back, js for fron in the nutshell, java is mostly used for back," +
+                " js for fron in the nutshell, java is mostly used for back, js for fron");
         article.setTimestamp("2016-05-26 05:30:29");
         article.setOwnerId(1);
         response.add(article);
@@ -51,7 +53,8 @@ public class ArticleService implements IArticleService{
         article.setId(5);
         article.setLikesCount(0);
         article.setHeader("Java vs Javascript 2016. Still stumped? ");
-        article.setContents("in the nutshell, java is mostly used for back, js for front");
+        article.setContents("in the nutshell, java is mostly used for back, js for front." +
+                "the nutshell is java is mostly used for back, js for front");
         article.setTimestamp("2016-05-26 05:30:29");
         article.setOwnerId(4);
         response.add(article);

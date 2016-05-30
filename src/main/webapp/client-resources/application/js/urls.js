@@ -8,6 +8,7 @@
         ACCOUNT_REGISTER: FLOGGER_HOST_URL + "/account/register",
         USERS_SHOWUP: FLOGGER_HOST_URL + "/entities/users",
         ARTICLES_SHOWUP: FLOGGER_HOST_URL + "/entities/articles",
+        ARTICLES_GET_ALL: FLOGGER_HOST_URL + "/article/getAll"
     };
 
     angular.module("floggerApp").constant("urls", ROUTE_URLS);

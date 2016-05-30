@@ -88,6 +88,12 @@ section.jumbotron h1 {
   width: 100%;
   height: 100%;
 }
+md-icon[md-svg-icon*="favorite"] {
+  padding-right: 3px;
+}
+md-icon[md-svg-icon*="favorite"].liked {
+  color: #e81c4f;
+}
 .loginBox {
   max-width: 90%;
   width: 500px;

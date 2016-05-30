@@ -12,9 +12,11 @@
     <script src="${appDatabaseControllerJs}"></script>
 <spring:url value="/client-resources/application/js/controllers/RegisterController.js" var="appRegisterControllerJs" />
     <script src="${appRegisterControllerJs}"></script>
-<spring:url value="/client-resources/application/js/controllers/ArticlesController.js" var="articlesControllerJs" />
+<spring:url value="/client-resources/application/js/controllers/HomeController.js" var="articlesControllerJs" />
     <script src="${articlesControllerJs}"></script>
 <spring:url value="/client-resources/application/js/services/user.svc.js" var="userServiceJS" />
     <script src="${userServiceJS}"></script>
 <spring:url value="/client-resources/application/js/routes.js" var="appRoutesJs" />
     <script src="${appRoutesJs}"></script>
+<spring:url value="/client-resources/application/js/directives/articleCard/articleCard.directive.js" var="articleCardJs" />
+    <script src="${articleCardJs}"></script>

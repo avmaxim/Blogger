@@ -3,7 +3,7 @@
 
     angular.module("floggerApp")
 
-        .config(function ($stateProvider, $urlRouterProvider) {
+        .config(function ($stateProvider, $urlRouterProvider, urls) {
             $stateProvider
 
                 .state("main", {
@@ -34,13 +34,17 @@
                     controllerAs: "dbCtrl"
                 })
 
-                .state("articles", {
-                    url: '/articles',
-                    templateUrl: "/client-resources/application/html/articles.html",
-                    controller: "articlesController",
-                    controllerAs: "artCtrl"
+                .state("home", {
+                    url: '/home',
+                    templateUrl: "/client-resources/application/html/home.html",
+                    controller: "homeController",
+                    controllerAs: "homeCtrl",
+                    resolve: {
+                        allArticles: function ($http) {
+                            return $http.get(urls.ARTICLES_GET_ALL);
+                        }
+                    }
                 });
-
             $urlRouterProvider.otherwise('/');
         });
 })();
