@@ -1,0 +1,20 @@
+<md-toolbar class="md-hue-2">
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
+            <md-icon md-svg-icon="client-resources/img/menu.svg"></md-icon>
+        </md-button>
+        <h2>
+            <span>Flogger</span>
+        </h2>
+    </div>
+</md-toolbar>
+<md-content class="md-padding" layout-xs="column" layout="row">
+    <div flex-xs flex-gt-xs="50" layout="column">
+        <article-card contents="article1" ng-repeat="article1 in homeCtrl.allArticles.slice(0, homeCtrl.allArticles.length/2)">
+        </article-card>
+    </div>
+    <div flex-xs flex-gt-xs="50" layout="column">
+        <article-card contents="article2" ng-repeat="article2 in homeCtrl.allArticles.slice(homeCtrl.allArticles.length/2)">
+        </article-card>
+    </div>
+</md-content>
