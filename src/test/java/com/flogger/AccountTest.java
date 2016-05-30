@@ -2,6 +2,7 @@ package com.flogger;
 
 import com.flogger.controllers.AccountController;
 import com.flogger.models.UserLoginModel;
+import com.flogger.models.UserRegistrationModel;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -28,24 +29,32 @@ public class AccountTest {
         UserLoginModel model = new UserLoginModel();
         model.setUsername("somename");
         model.setPassword("somepassword");
-        UserLoginModel result = new UserLoginModel();
+        FloggerJsonData<UserLoginModel> result = FloggerJsonData.GetAsJson(model);
+        model.setPassword("somepassword");
         result = myAccountController.loginUser(model);
         if (result == null)
             Assert.fail();
     }
 
-    @Test
-    public void EmptyUserTest(){
-        UserLoginModel model = new UserLoginModel();
-        model.setUsername("df");
-        model.setUsername("sfsfsfsfseee");
-        UserLoginModel result = new UserLoginModel();
-        result = myAccountController.loginUser(model);
-        String name = result.getUsername();
-        String password = result.getPassword();
-        if ((name == "") || (password == ""))
-            Assert.fail();
 
+    @Test
+    public void logoutTest(){
+        FloggerJsonData fjd = new FloggerJsonData();
+        fjd = myAccountController.logoutUser();
+        if (fjd == null)
+            Assert.fail();
+    }
+
+    @Test
+    public void RegistrUserTest(){
+        FloggerJsonData fjd;
+        UserRegistrationModel model = new UserRegistrationModel();
+        model.setUsername("sfkww");
+        model.setPassword("kelse");
+        model.setEmail("cucu@gmail.com");
+        fjd = myAccountController.registerUser(model);
+        if (fjd == null)
+            Assert.fail();
     }
 
 

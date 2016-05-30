@@ -38,6 +38,6 @@
     <!-- services' bindings -->
     <bean id="entitiesLookupService" class="com.flogger.services.EntitiesLookupService" />
     <bean id="repositoryService" class="com.flogger.services.RepositoryService" />
-
+    <bean id="articleService" class="com.flogger.services.ArticleService" />
 
 </beans>

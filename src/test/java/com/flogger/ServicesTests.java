@@ -16,4 +16,19 @@ import static org.junit.Assert.*;
 
 @RunWith(MockitoJUnitRunner.class)
 public class ServicesTests {
+    @Test
+    public void FloggerJsonDataTest(){
+        FloggerJsonData data = new FloggerJsonData();
+        data.setData(new Object());
+        if (data.getData() == null)
+            Assert.fail();
+    }
+
+    @Test
+    public void ObjectNotNullTest(){
+        FloggerJsonData data = new FloggerJsonData();
+        data.setData(new Object());
+        if (data == null)
+            Assert.fail();
+    }
 }
