@@ -3,3 +3,4 @@ src/main/webapp/client-resources/bower_components
 out
 target
 node_modules
+.idea
