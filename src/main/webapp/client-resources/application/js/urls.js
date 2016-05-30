@@ -8,9 +8,10 @@
         ACCOUNT_REGISTER: FLOGGER_HOST_URL + "/account/register",
         USERS_SHOWUP: FLOGGER_HOST_URL + "/entities/users",
         ARTICLES_SHOWUP: FLOGGER_HOST_URL + "/entities/articles",
-        ARTICLES_GET_ALL: FLOGGER_HOST_URL + "/article/getAll"
+        ARTICLES_GET_ALL: FLOGGER_HOST_URL + "/article/getAll",
+        DOWNLOAD_ARTICLE_PDF: FLOGGER_HOST_URL + "/document/downloadArticleAsPDF/"
     };
 
     angular.module("floggerApp").constant("urls", ROUTE_URLS);
-
+    
 })(window);
