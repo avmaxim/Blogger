@@ -1,9 +1,9 @@
-(function() {
+(function(window) {
     'use strict';
 
     angular
         .module("custom")
-        .directive("articleCard", function () {
+        .directive("articleCard", ["urls", function (urls) {
             return {
                 restrict: 'E',
                 controller: articleCardController,
@@ -14,13 +14,14 @@
                 },
                 bindToController: true
             };
-        });
+        }]);
 
 
-    function articleCardController() {
+    function articleCardController(urls) {
         var vm = this;
         vm.liked = false;
         vm.toggleLike = toggleLike;
+        vm.download = download;
         return;
 
         function toggleLike() {
@@ -31,5 +32,9 @@
                 vm.contents.likesCount--;
             }
         }
+        
+        function download(){
+            window.open(urls.DOWNLOAD_ARTICLE_PDF + vm.contents.id);
+        }
     }
-})();
+})(window);
