@@ -11,13 +11,15 @@ public class FloggerJsonData<TData> {
     public static <TData> FloggerJsonData GetAsJson(TData data){
         FloggerJsonData response = new FloggerJsonData();
         try{
+            if (data == null)
+                throw new Exception("Error: No articles with this id detected");
             response.setData(data);
             response.setSuccess(true);
             response.setErrorInfo(null);
         }
-        catch (Exception e){
+        catch (Exception ex){
             response.setData(null);
-            response.setErrorInfo(e.getMessage());
+            response.setErrorInfo(ex.getMessage());
             response.setSuccess(false);
         }
         return response;

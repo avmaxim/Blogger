@@ -14,6 +14,13 @@
 
     <mvc:annotation-driven />
 
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://localhost:3306/floggerdb" />
+        <property name="username" value="root" />
+        <property name="password" value="mama" />
+    </bean>
+
     <bean class="org.springframework.web.servlet.view.ResourceBundleViewResolver">
         <property name="order" value="1"/>
         <property name="basename" value="views"/>
@@ -44,6 +51,8 @@
     <!-- services' bindings -->
     <bean id="entitiesLookupService" class="com.flogger.services.EntitiesLookupService" />
     <bean id="repositoryService" class="com.flogger.services.RepositoryService" />
-    <bean id="articleService" class="com.flogger.services.ArticleService" />
+    <bean id="articleService" class="com.flogger.services.ArticleService" >
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
 
 </beans>
