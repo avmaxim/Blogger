@@ -30,4 +30,18 @@ public class DocumentController {
         List<ArticleModel> articles = articleService.getAll();
         return new ModelAndView("xlsView", "articles", articles);
     }
+
+    @RequestMapping(value = "/downloadArticlesAsCSV", method = RequestMethod.GET)
+    public ModelAndView downloadCSV() {
+        List<ArticleModel> articles = articleService.getAll();
+        String[] header = { "id", "header", "contents", "likesCount",
+                "date", "ownerId"};
+
+        ModelAndView model = new ModelAndView("csvView");
+        model.addObject("csvData", articles);
+        model.addObject("csvHeader", header);
+
+        return model;
+    }
+
 }

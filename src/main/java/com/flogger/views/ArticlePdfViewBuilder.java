@@ -2,13 +2,10 @@ package com.flogger.views;
 
 import com.flogger.models.ArticleModel;
 import com.itextpdf.text.*;
-import com.itextpdf.text.pdf.PdfPCell;
-import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.net.URL;
 import java.util.Formatter;
 import java.util.Map;
 
@@ -42,7 +39,7 @@ public class ArticlePdfViewBuilder extends  AbstractITextPdfView{
         Formatter f = new Formatter();
         Paragraph mainInfo = new Paragraph(
                 f.format("Date: %s.\n",
-                        article.getTimestamp()).toString(),
+                        article.getDate()).toString(),
                 mainInfoFont);
 
         mainInfo.setSpacingBefore(40);

@@ -1,6 +1,5 @@
 package com.flogger.services;
 
-import com.flogger.domains.Article;
 import com.flogger.models.ArticleModel;
 
 import java.util.ArrayList;
@@ -17,7 +16,7 @@ public class ArticleService implements IArticleService{
         article.setLikesCount(0);
         article.setHeader("Java vs Javascript 2016. Still stumped? ");
         article.setContents("In the nutshell, java is mostly used for back, js for front");
-        article.setTimestamp("2016-05-26 05:30:29");
+        article.setDate("2016-05-26 05:30:29");
         article.setOwnerId(1);
         response.add(article);
 
@@ -26,7 +25,7 @@ public class ArticleService implements IArticleService{
         article.setLikesCount(0);
         article.setHeader("Java vs Javascript 2016. Still stumped? ");
         article.setContents("In the nutshell, java is mostly used for back, js for front. But what those features that make these two languages be so distinct as well as not");
-        article.setTimestamp("2016-05-26 05:30:29");
+        article.setDate("2016-05-26 05:30:29");
         article.setOwnerId(2);
         response.add(article);
 
@@ -38,7 +37,7 @@ public class ArticleService implements IArticleService{
         article.setContents("in the nutshell, java is mostly used for back, js for front in the nutshell, java is" +
                 " mostly used for back, js for fron in the nutshell, java is mostly used for back," +
                 " js for fron in the nutshell, java is mostly used for back, js for fron");
-        article.setTimestamp("2016-05-26 05:30:29");
+        article.setDate("2016-05-26 05:30:29");
         article.setOwnerId(3);
         response.add(article);
 
@@ -47,7 +46,7 @@ public class ArticleService implements IArticleService{
         article.setLikesCount(0);
         article.setHeader("Java vs Javascript 2016. Still stumped? ");
         article.setContents("In the nutshell, java is mostly used for back, js for front. But what those features that make these two languages be so distinct as well as not. Re");
-        article.setTimestamp("2016-05-26 05:30:29");
+        article.setDate("2016-05-26 05:30:29");
         article.setOwnerId(4);
         response.add(article);
 
@@ -57,7 +56,7 @@ public class ArticleService implements IArticleService{
         article.setHeader("Java vs Javascript 2016. Still stumped? ");
         article.setContents("in the nutshell, java is mostly used for back, js for front." +
                 "the nutshell is java is mostly used for back, js for front");
-        article.setTimestamp("2016-05-26 05:30:29");
+        article.setDate("2016-05-26 05:30:29");
         article.setOwnerId(5);
         response.add(article);
 
@@ -66,7 +65,7 @@ public class ArticleService implements IArticleService{
         article.setLikesCount(0);
         article.setHeader("Java vs Javascript 2016. Still stumped? ");
         article.setContents("In the nutshell, java is mostly used for back, js for front. But what those features that make these two languages be so distinct as well as not");
-        article.setTimestamp("2016-05-26 05:30:29");
+        article.setDate("2016-05-26 05:30:29");
         article.setOwnerId(6);
         response.add(article);
 
@@ -75,7 +74,7 @@ public class ArticleService implements IArticleService{
         article.setLikesCount(0);
         article.setHeader("Java vs Javascript 2016. Still stumped? ");
         article.setContents("in the nutshell, java is mostly used for back, js for front. But what those features that make these two languages be so distinct as well as not");
-        article.setTimestamp("2016-05-26 05:30:29");
+        article.setDate("2016-05-26 05:30:29");
         article.setOwnerId(7);
         response.add(article);
 
@@ -89,7 +88,7 @@ public class ArticleService implements IArticleService{
         article.setLikesCount(0);
         article.setHeader("Java vs Javascript 2016. Still stumped? ");
         article.setContents("in the nutshell, java is mostly used for back, js for front. But what those features that make these two languages be so distinct as well as not");
-        article.setTimestamp("2016-05-26 05:30:29");
+        article.setDate("2016-05-26 05:30:29");
         article.setOwnerId(id);
         return article;
     }

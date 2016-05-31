@@ -66,7 +66,7 @@ public class ArticlesExcelViewBuilder extends AbstractXlsView {
             currentRow.createCell(0).setCellValue(articleModel.getId());
             currentRow.createCell(1).setCellValue(articleModel.getHeader());
             currentRow.createCell(2).setCellValue(articleModel.getContents());
-            currentRow.createCell(3).setCellValue(articleModel.getTimestamp());
+            currentRow.createCell(3).setCellValue(articleModel.getDate());
             currentRow.createCell(4).setCellValue(articleModel.getLikesCount());
             currentRow.createCell(5).setCellValue("user #" + articleModel.getOwnerId());
         }

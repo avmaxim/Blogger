@@ -6,9 +6,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-/**
- * Created by andrei on 5/29/2016.
- */
+
 public class ArticleModel {
 
     private Integer id;
@@ -30,8 +28,8 @@ public class ArticleModel {
     public Integer getLikesCount(){ return likesCount; }
     public void setLikesCount(Integer likesCount){this.likesCount = likesCount; }
 
-    public String getTimestamp(){ return date; }
-    public void setTimestamp(String date){this.date = date; }
+    public String getDate(){ return date; }
+    public void setDate(String date){this.date = date; }
 
     public Integer getOwnerId(){ return ownerId; }
     public void setOwnerId(Integer ownerId){this.ownerId = ownerId; }
