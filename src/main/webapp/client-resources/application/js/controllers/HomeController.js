@@ -1,4 +1,4 @@
-(function() {
+(function(window) {
     'use strict';
 
     angular
@@ -6,8 +6,16 @@
         .controller("homeController", homeController);
 
     
-    function homeController(allArticles) {
-        var artCtrl = this;
-        artCtrl.allArticles = allArticles.data.data;
+    function homeController(allArticles, urls) {
+        var homeCtrl = this;
+        homeCtrl.allArticles = allArticles.data.data;
+        homeCtrl.downloadArticlesExcel = downloadArticlesExcel;
+        return;
+        
+        function downloadArticlesExcel(){
+            window.open(urls.DOWNLOAD_ARTICLES_EXCEL);
+        }
+
+      
     }
-})();
+})(window);

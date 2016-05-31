@@ -42,6 +42,9 @@
                     resolve: {
                         allArticles: function ($http) {
                             return $http.get(urls.ARTICLES_GET_ALL);
+                        },
+                        urls: function(){
+                            return urls;
                         }
                     }
                 });

@@ -24,4 +24,10 @@ public class DocumentController {
         ArticleModel article = articleService.getById(id);
         return new ModelAndView("pdfView", "article", article);
     }
+
+    @RequestMapping(value = "/downloadArticlesAsExcel", method = RequestMethod.GET)
+    public ModelAndView downloadExcel() {
+        List<ArticleModel> articles = articleService.getAll();
+        return new ModelAndView("xlsView", "articles", articles);
+    }
 }

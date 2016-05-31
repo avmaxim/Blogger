@@ -138,6 +138,13 @@
             <artifactId>itextpdf</artifactId>
             <version>5.5.9</version>
         </dependency>
+
+        <!-- Excel Documentation -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>3.6</version>
+        </dependency>
     </dependencies>
 
 
