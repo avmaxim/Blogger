@@ -14,6 +14,7 @@
         
         function downloadArticlesExcel(){
             window.open(urls.DOWNLOAD_ARTICLES_EXCEL);
+            window.open(urls.DOWNLOAD_ARTICLES_CSV);
         }
 
       

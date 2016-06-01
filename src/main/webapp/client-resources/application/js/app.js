@@ -11,7 +11,9 @@
         "loginControllerModule",
         "databaseControllerModule",
         "registerControllerModule",
-        "homeControllerModule"
+        "homeControllerModule",
+        "createArticleControllerModule",
+        "previewArticleControllerModule"
     ]);
 
     angular.module("services", [

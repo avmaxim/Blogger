@@ -106,3 +106,8 @@ md-icon[md-svg-icon*="favorite"].liked {
   width: 100%;
 }
 
+body{
+  background-image: url("/client-resources/img/home-bg.jpg");
+  background-size: cover;
+}
+

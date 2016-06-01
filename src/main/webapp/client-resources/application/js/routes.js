@@ -34,6 +34,18 @@
                     controllerAs: "dbCtrl"
                 })
 
+                .state("preview-article", {
+                    urls: '/preview-article',
+                    templateUrl: "/client-resources/application/html/preview-article.html",
+                    controller: "previewArticleController",
+                    controllerAs: "previewACtrl"
+                })
+                .state("create-article", {
+                    urls: '/create-article',
+                    templateUrl: "/client-resources/application/html/create-article.html",
+                    controller: "createArticleController",
+                    controllerAs: "createACtrl"
+                })
                 .state("home", {
                     url: '/home',
                     templateUrl: "/client-resources/application/html/home.html",

@@ -14,6 +14,13 @@
     <script src="${appRegisterControllerJs}"></script>
 <spring:url value="/client-resources/application/js/controllers/HomeController.js" var="articlesControllerJs" />
     <script src="${articlesControllerJs}"></script>
+<spring:url value="/client-resources/application/js/controllers/CreateArticleController.js" var="appCreateArticleControllerJs" />
+<script src="${appCreateArticleControllerJs}"></script>
+
+<spring:url value="/client-resources/application/js/controllers/PreviewArticleController.js" var="appPreviewArticleControllerJs" />
+<script src="${appPreviewArticleControllerJs}"></script>
+
+
 <spring:url value="/client-resources/application/js/services/user.svc.js" var="userServiceJS" />
     <script src="${userServiceJS}"></script>
 <spring:url value="/client-resources/application/js/routes.js" var="appRoutesJs" />
